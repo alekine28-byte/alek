@@ -25,7 +25,6 @@
       min-height: 100vh;
     }
 
-    /* GARANTE QUE TODOS OS ELEMENTOS INTERATIVOS TENHAM CURSOR VISÍVEL QUANDO NECESSÁRIO */
     a, button, .executor-card, .btn-trigger, .close-modal-btn, .btn-download {
       cursor: pointer;
     }
@@ -186,7 +185,6 @@
       padding-top: 2rem;
     }
 
-    /* =========== MODAL GLASS =========== */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -349,52 +347,37 @@
 
   <div class="scripts-grid">
     <div class="card-container">
-      <!-- card Solara -->
       <div class="executor-card" id="openSolaraBtn">
         <div class="card-icon">✨</div>
         <h3>Solara Executor</h3>
         <div class="badge">🔰 estável · atualizado</div>
         <p>Executor de scripts de alto desempenho, interface leve e compatibilidade total.</p>
-        <div class="btn-trigger">
-          📦 Ver detalhes
-          <span>→</span>
-        </div>
+        <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
 
-      <!-- card Luna -->
       <div class="executor-card" id="openLunaBtn">
         <div class="card-icon">🌙</div>
         <h3>Luna Executor</h3>
         <div class="badge">⚡ rápido · moderno</div>
         <p>Executor rápido e compatível, ideal para scripts avançados e estabilidade.</p>
-        <div class="btn-trigger">
-          📦 Ver detalhes
-          <span>→</span>
-        </div>
+        <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
 
-      <!-- card Velocity -->
       <div class="executor-card" id="openVelocityBtn">
         <div class="card-icon">⚡</div>
         <h3>Velocity Executor</h3>
         <div class="badge">🚀 rápido · poderoso</div>
         <p>Executor de alta velocidade com suporte avançado e desempenho otimizado.</p>
-        <div class="btn-trigger">
-          📦 Ver detalhes
-          <span>→</span>
-        </div>
+        <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
 
-      <!-- card Madium (NOVO) -->
+      <!-- Madium com emoji 💀 (caveira = poder/morte/matador) -->
       <div class="executor-card" id="openMadiumBtn">
-        <div class="card-icon">🟣</div>
+        <div class="card-icon">💀</div>
         <h3>Madium Executor</h3>
-        <div class="badge">💜 confiável · moderno</div>
-        <p>Executor estável com foco em simplicidade e alto desempenho para scripts.</p>
-        <div class="btn-trigger">
-          📦 Ver detalhes
-          <span>→</span>
-        </div>
+        <div class="badge">💀 letal · poderoso</div>
+        <p>Executor letal com alto desempenho, estabilidade e compatibilidade total.</p>
+        <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
     </div>
   </div>
@@ -407,42 +390,23 @@
 <!-- MODAL SOLARA -->
 <div id="modalSolara" class="modal-overlay">
   <div class="modal-card">
-    <div class="modal-logo">
-      <span class="modal-emoji">🚀 ✨</span>
-    </div>
+    <div class="modal-logo"><span class="modal-emoji">🚀 ✨</span></div>
     <h2>Solara Executor</h2>
-    <div class="info-site">
-      🌐 site oficial: <a href="https://getsolara.dev" target="_blank" rel="noopener noreferrer">getsolara.dev</a>
-    </div>
-    <p style="margin: 12px 0 0; font-size: clamp(0.8rem, 3vw, 0.9rem);">
-      Baixe a versão mais recente do bootstrapper diretamente do canal seguro.
-    </p>
-    <a class="btn-download" id="solaraDownloadBtn" href="https://getsolara.dev/download/static/files/BootstrapperNew.exe" download="BootstrapperNew.exe">
-      ⬇️ Baixar Solara
-    </a>
-    <br>
+    <div class="info-site">🌐 site oficial: <a href="https://getsolara.dev" target="_blank" rel="noopener noreferrer">getsolara.dev</a></div>
+    <p>Baixe a versão mais recente do bootstrapper diretamente do canal seguro.</p>
+    <a class="btn-download" href="https://getsolara.dev/download/static/files/BootstrapperNew.exe" download="BootstrapperNew.exe">⬇️ Baixar Solara</a><br>
     <button class="close-modal-btn" data-modal="modalSolara">Fechar</button>
   </div>
 </div>
 
-<!-- MODAL LUNA: ATUALIZADO COM O LINK CORRETO FORNECIDO -->
+<!-- MODAL LUNA -->
 <div id="modalLuna" class="modal-overlay">
   <div class="modal-card">
-    <div class="modal-logo">
-      <span class="modal-emoji">🌙 ✨</span>
-    </div>
+    <div class="modal-logo"><span class="modal-emoji">🌙 ✨</span></div>
     <h2>Luna Executor</h2>
-    <div class="info-site">
-      🌐 site oficial: <a href="https://github.com/tp-handler/luna-releases/releases" target="_blank" rel="noopener noreferrer">github.com/tp-handler/luna-releases</a>
-    </div>
-    <p style="margin: 12px 0 0; font-size: clamp(0.8rem, 3vw, 0.9rem);">
-      Versão estável do Luna Executor. Clique abaixo para baixar diretamente.
-    </p>
-    <!-- LINK DO LUNA ATUALIZADO CONFORME SOLICITADO -->
-    <a class="btn-download" id="lunaDownloadBtn" href="https://release-assets.githubusercontent.com/github-production-release-asset/1201324394/0b6aa339-ffc0-4bbc-92f6-873f204c305a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-04-26T19%3A56%3A15Z&rscd=attachment%3B+filename%3DLuna.exe&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-04-26T18%3A55%3A19Z&ske=2026-04-26T19%3A56%3A15Z&sks=b&skv=2018-11-09&sig=etb450%2BxYZ%2B7wFICnHILYFuAqIb4W75XnJNb%2FNEvUoU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3NzIzMDU3NywibmJmIjoxNzc3MjMwMjc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.3xSCvpz4cqaZ3ndKoB759BY_a8i5hGLvESavhPuoJx0&response-content-disposition=attachment%3B%20filename%3DLuna.exe&response-content-type=application%2Foctet-stream" download="Luna.exe">
-      ⬇️ Baixar Luna
-    </a>
-    <br>
+    <div class="info-site">🌐 site oficial: <a href="https://github.com/tp-handler/luna-releases/releases" target="_blank" rel="noopener noreferrer">github.com/tp-handler/luna-releases</a></div>
+    <p>Versão estável do Luna Executor. Clique abaixo para baixar diretamente.</p>
+    <a class="btn-download" href="https://release-assets.githubusercontent.com/github-production-release-asset/1201324394/0b6aa339-ffc0-4bbc-92f6-873f204c305a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-04-26T19%3A56%3A15Z&rscd=attachment%3B+filename%3DLuna.exe&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-04-26T18%3A55%3A19Z&ske=2026-04-26T19%3A56%3A15Z&sks=b&skv=2018-11-09&sig=etb450%2BxYZ%2B7wFICnHILYFuAqIb4W75XnJNb%2FNEvUoU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3NzIzMDU3NywibmJmIjoxNzc3MjMwMjc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.3xSCvpz4cqaZ3ndKoB759BY_a8i5hGLvESavhPuoJx0&response-content-disposition=attachment%3B%20filename%3DLuna.exe&response-content-type=application%2Foctet-stream" download="Luna.exe">⬇️ Baixar Luna</a><br>
     <button class="close-modal-btn" data-modal="modalLuna">Fechar</button>
   </div>
 </div>
@@ -450,59 +414,40 @@
 <!-- MODAL VELOCITY -->
 <div id="modalVelocity" class="modal-overlay">
   <div class="modal-card">
-    <div class="modal-logo">
-      <span class="modal-emoji">⚡ 🚀</span>
-    </div>
+    <div class="modal-logo"><span class="modal-emoji">⚡ 🚀</span></div>
     <h2>Velocity Executor</h2>
-    <div class="info-site">
-      🌐 site oficial: <a href="https://realvelocity.xyz" target="_blank" rel="noopener noreferrer">realvelocity.xyz</a>
-    </div>
-    <p style="margin: 12px 0 0; font-size: clamp(0.8rem, 3vw, 0.9rem);">
-      Baixe a versão mais recente do Velocity Executor diretamente do canal seguro.
-    </p>
-    <a class="btn-download" id="velocityDownloadBtn" href="https://file-sa-sao-1.gofile.io/download/web/80e37d2b-54f1-49a2-a4ba-48a7925e56bc/Velocity.zip" download="Velocity.zip">
-      ⬇️ Baixar Velocity
-    </a>
-    <br>
+    <div class="info-site">🌐 site oficial: <a href="https://realvelocity.xyz" target="_blank" rel="noopener noreferrer">realvelocity.xyz</a></div>
+    <p>Baixe a versão mais recente do Velocity Executor diretamente do canal seguro.</p>
+    <a class="btn-download" href="https://file-sa-sao-1.gofile.io/download/web/80e37d2b-54f1-49a2-a4ba-48a7925e56bc/Velocity.zip" download="Velocity.zip">⬇️ Baixar Velocity</a><br>
     <button class="close-modal-btn" data-modal="modalVelocity">Fechar</button>
   </div>
 </div>
 
-<!-- MODAL MADIUM (NOVO) -->
+<!-- MODAL MADIUM com emoji 💀⚙️ -->
 <div id="modalMadium" class="modal-overlay">
   <div class="modal-card">
-    <div class="modal-logo">
-      <span class="modal-emoji">💜 🟣</span>
-    </div>
+    <div class="modal-logo"><span class="modal-emoji">💀 ⚙️</span></div>
     <h2>Madium Executor</h2>
-    <div class="info-site">
-      🌐 site oficial: <a href="https://work.ink/2nLR/madium-install" target="_blank" rel="noopener noreferrer">work.ink/2nLR/madium-install</a>
-    </div>
-    <p style="margin: 12px 0 0; font-size: clamp(0.8rem, 3vw, 0.9rem);">
-      Baixe o instalador oficial do Madium Executor. Versão estável e otimizada.
-    </p>
-    <a class="btn-download" id="mediumDownloadBtn" href="https://file-sa-sao-1.gofile.io/download/web/23415ade-a22e-4868-9644-bd060f983a58/Mad-Installer.exe" download="Mad-Installer.exe">
-      ⬇️ Baixar Madium
-    </a>
-    <br>
+    <div class="info-site">🌐 site oficial: <a href="https://work.ink/2nLR/madium-install" target="_blank" rel="noopener noreferrer">work.ink/2nLR/madium-install</a></div>
+    <p>Baixe o instalador oficial do Madium Executor. Versão estável e otimizada.</p>
+    <a class="btn-download" href="https://file-sa-sao-1.gofile.io/download/web/23415ade-a22e-4868-9644-bd060f983a58/Mad-Installer.exe" download="Mad-Installer.exe">⬇️ Baixar Madium</a><br>
     <button class="close-modal-btn" data-modal="modalMadium">Fechar</button>
   </div>
 </div>
 
 <script>
   (function() {
-    // ========== GERENCIAMENTO DE MODAIS ==========
     const modals = {
       solara: document.getElementById('modalSolara'),
       luna: document.getElementById('modalLuna'),
       velocity: document.getElementById('modalVelocity'),
-      madium: document.getElementById('modalMadium')  // ADICIONADO
+      madium: document.getElementById('modalMadium')
     };
 
     const openSolaraBtn = document.getElementById('openSolaraBtn');
     const openLunaBtn = document.getElementById('openLunaBtn');
     const openVelocityBtn = document.getElementById('openVelocityBtn');
-    const openMadiumBtn = document.getElementById('openMadiumBtn');  // ADICIONADO
+    const openMadiumBtn = document.getElementById('openMadiumBtn');
 
     function openModal(modalId) {
       const modal = modals[modalId];
@@ -520,92 +465,32 @@
 
     function closeAllModals() {
       Object.values(modals).forEach(function(modal) {
-        if (modal && modal.classList.contains('active')) {
-          modal.classList.remove('active');
-        }
+        if (modal && modal.classList.contains('active')) modal.classList.remove('active');
       });
       document.body.style.overflow = '';
     }
 
-    // Abrir modais pelos cards
-    if (openSolaraBtn) {
-      openSolaraBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        openModal('solara');
-      });
-    }
+    if (openSolaraBtn) openSolaraBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('solara'); });
+    if (openLunaBtn) openLunaBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('luna'); });
+    if (openVelocityBtn) openVelocityBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('velocity'); });
+    if (openMadiumBtn) openMadiumBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('madium'); });
 
-    if (openLunaBtn) {
-      openLunaBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        openModal('luna');
-      });
-    }
-
-    if (openVelocityBtn) {
-      openVelocityBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        openModal('velocity');
-      });
-    }
-
-    // ABRIR MODAL DO MADIUM
-    if (openMadiumBtn) {
-      openMadiumBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        openModal('madium');
-      });
-    }
-
-    // Botões fechar dentro dos modais
-    document.querySelectorAll('.close-modal-btn').forEach(function(btn) {
+    document.querySelectorAll('.close-modal-btn').forEach(btn => {
       btn.addEventListener('click', function() {
-        var modalId = btn.getAttribute('data-modal');
+        const modalId = this.getAttribute('data-modal');
         if (modalId) {
-          // Tenta encontrar pela chave minúscula ou pelo elemento diretamente
-          let modalKey = modalId.replace('modal', '').toLowerCase();
-          if (modals[modalKey]) {
-            closeModal(modals[modalKey]);
-          } else {
-            closeModal(document.getElementById(modalId));
-          }
-        } else {
-          closeAllModals();
-        }
+          const modalKey = modalId.replace('modal', '').toLowerCase();
+          if (modals[modalKey]) closeModal(modals[modalKey]);
+          else closeModal(document.getElementById(modalId));
+        } else closeAllModals();
       });
     });
 
-    // Fechar ao clicar no overlay
-    Object.values(modals).forEach(function(modal) {
-      if (modal) {
-        modal.addEventListener('click', function(e) {
-          if (e.target === modal) {
-            closeModal(modal);
-          }
-        });
-      }
+    Object.values(modals).forEach(modal => {
+      if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal); });
     });
 
-    // Tecla ESC fecha qualquer modal
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeAllModals();
-      }
-    });
-
-    // Opcional: Força o download correto mesmo se o navegador tentar abrir o arquivo
-    const lunaDownloadLink = document.getElementById('lunaDownloadBtn');
-    if (lunaDownloadLink) {
-      lunaDownloadLink.addEventListener('click', function(e) {
-        console.log('Iniciando download do Luna Executor via link seguro.');
-      });
-    }
-    const madiumDownloadLink = document.getElementById('mediumDownloadBtn');
-    if (madiumDownloadLink) {
-      madiumDownloadLink.addEventListener('click', function(e) {
-        console.log('Iniciando download do Madium Executor via link seguro.');
-      });
-    }
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAllModals(); });
   })();
 </script>
 
