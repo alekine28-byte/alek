@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>Alek Dev Scripts | Luna + Solara + Velocity + Madium + Swift + LX63 Executors</title>
+  <title>Alek Dev Scripts | Luna + Solara + Velocity + Madium + Swift + LX63 + Xeno Executors</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
     * {
@@ -356,7 +356,7 @@
         <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
 
-      <!-- card Velocity (agora na posição onde estava o Madium) -->
+      <!-- card Velocity -->
       <div class="executor-card" id="openVelocityBtn">
         <div class="card-icon">⚡</div>
         <h3>Velocity Executor</h3>
@@ -374,7 +374,7 @@
         <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
 
-      <!-- card Madium (agora na posição onde estava o Velocity) -->
+      <!-- card Madium -->
       <div class="executor-card" id="openMadiumBtn">
         <div class="card-icon">💀</div>
         <h3>Madium Executor</h3>
@@ -398,6 +398,15 @@
         <h3>LX63 Executor</h3>
         <div class="badge">🎯 avançado · preciso</div>
         <p>Executor de última geração com alto desempenho, estabilidade incomparável e suporte total.</p>
+        <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
+      </div>
+
+      <!-- NOVO CARD: Xeno Executor -->
+      <div class="executor-card" id="openXenoBtn">
+        <div class="card-icon">🌀</div>
+        <h3>Xeno Executor</h3>
+        <div class="badge">🌀 inovador · poderoso</div>
+        <p>Executor de nova geração com máxima performance e estabilidade incomparável.</p>
         <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
     </div>
@@ -480,6 +489,18 @@
   </div>
 </div>
 
+<!-- NOVO MODAL XENO -->
+<div id="modalXeno" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-logo"><span class="modal-emoji">🌀 🚀</span></div>
+    <h2>Xeno Executor</h2>
+    <div class="info-site">🌐 site oficial: <a href="https://xeno.now" target="_blank" rel="noopener noreferrer">xeno.now</a></div>
+    <p>Baixe a versão mais recente do Xeno Executor. Alta performance, estabilidade e tecnologia inovadora.</p>
+    <a class="btn-download" href="https://files.workink.click/_api/v1/s3/downloadProxy/6aa14b80-bd94-4063-84d9-35eaf159fa17?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlblR5cGUiOiJkb3dubG9hZC1vbmx5IiwiZG93bmxvYWRGaWxlSWQiOiI2YWExNGI4MC1iZDk0LTQwNjMtODRkOS0zNWVhZjE1OWZhMTciLCJpYXQiOjE3NzczOTg2MDQsImV4cCI6MTc3NzQwMDQwNH0.z4zbkpbvUTr8K6KCW5MYeTO1Vkghqoxg0OQAj5P6VOc" download="Xeno.exe">⬇️ Baixar Xeno</a><br>
+    <button class="close-modal-btn" data-modal="modalXeno">Fechar</button>
+  </div>
+</div>
+
 <script>
   (function() {
     const modals = {
@@ -488,7 +509,8 @@
       velocity: document.getElementById('modalVelocity'),
       madium: document.getElementById('modalMadium'),
       swift: document.getElementById('modalSwift'),
-      lx63: document.getElementById('modalLX63')
+      lx63: document.getElementById('modalLX63'),
+      xeno: document.getElementById('modalXeno')  // NOVO
     };
 
     const openSolaraBtn = document.getElementById('openSolaraBtn');
@@ -497,6 +519,7 @@
     const openMadiumBtn = document.getElementById('openMadiumBtn');
     const openSwiftBtn = document.getElementById('openSwiftBtn');
     const openLX63Btn = document.getElementById('openLX63Btn');
+    const openXenoBtn = document.getElementById('openXenoBtn');  // NOVO
 
     function openModal(modalId) {
       const modal = modals[modalId];
@@ -525,6 +548,7 @@
     if (openMadiumBtn) openMadiumBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('madium'); });
     if (openSwiftBtn) openSwiftBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('swift'); });
     if (openLX63Btn) openLX63Btn.addEventListener('click', (e) => { e.stopPropagation(); openModal('lx63'); });
+    if (openXenoBtn) openXenoBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('xeno'); });  // NOVO
 
     document.querySelectorAll('.close-modal-btn').forEach(btn => {
       btn.addEventListener('click', function() {
