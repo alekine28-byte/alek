@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>Alek Dev Scripts | Luna + Solara + Velocity + Madium Executors</title>
+  <title>Alek Dev Scripts | Luna + Solara + Velocity + Madium + Swift + LX63 Executors</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
     * {
@@ -356,12 +356,12 @@
         <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
 
-      <!-- card Madium (abaixo do Solara) -->
-      <div class="executor-card" id="openMadiumBtn">
-        <div class="card-icon">💀</div>
-        <h3>Madium Executor</h3>
-        <div class="badge">💀 letal · poderoso</div>
-        <p>Executor letal com alto desempenho, estabilidade e compatibilidade total.</p>
+      <!-- card Velocity (agora na posição onde estava o Madium) -->
+      <div class="executor-card" id="openVelocityBtn">
+        <div class="card-icon">⚡</div>
+        <h3>Velocity Executor</h3>
+        <div class="badge">🚀 rápido · poderoso</div>
+        <p>Executor de alta velocidade com suporte avançado e desempenho otimizado.</p>
         <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
 
@@ -374,12 +374,30 @@
         <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
 
-      <!-- card Velocity -->
-      <div class="executor-card" id="openVelocityBtn">
-        <div class="card-icon">⚡</div>
-        <h3>Velocity Executor</h3>
-        <div class="badge">🚀 rápido · poderoso</div>
-        <p>Executor de alta velocidade com suporte avançado e desempenho otimizado.</p>
+      <!-- card Madium (agora na posição onde estava o Velocity) -->
+      <div class="executor-card" id="openMadiumBtn">
+        <div class="card-icon">💀</div>
+        <h3>Madium Executor</h3>
+        <div class="badge">💀 letal · poderoso</div>
+        <p>Executor letal com alto desempenho, estabilidade e compatibilidade total.</p>
+        <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
+      </div>
+
+      <!-- card Swift Executor -->
+      <div class="executor-card" id="openSwiftBtn">
+        <div class="card-icon">🐦</div>
+        <h3>Swift Executor</h3>
+        <div class="badge">⚡ ultra-rápido · confiável</div>
+        <p>Executor de alto desempenho com tecnologia avançada e máxima estabilidade.</p>
+        <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
+      </div>
+
+      <!-- card LX63 Executor -->
+      <div class="executor-card" id="openLX63Btn">
+        <div class="card-icon">🔷</div>
+        <h3>LX63 Executor</h3>
+        <div class="badge">🎯 avançado · preciso</div>
+        <p>Executor de última geração com alto desempenho, estabilidade incomparável e suporte total.</p>
         <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
     </div>
@@ -438,19 +456,47 @@
   </div>
 </div>
 
+<!-- MODAL SWIFT -->
+<div id="modalSwift" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-logo"><span class="modal-emoji">🐦 ⚡</span></div>
+    <h2>Swift Executor</h2>
+    <div class="info-site">🌐 site oficial: <a href="https://getswift.vip" target="_blank" rel="noopener noreferrer">getswift.vip</a></div>
+    <p>Baixe a versão mais recente do Swift Executor. Ultra-rápido, seguro e confiável.</p>
+    <a class="btn-download" href="https://getswift.vip/download" download>⬇️ Baixar Swift</a><br>
+    <button class="close-modal-btn" data-modal="modalSwift">Fechar</button>
+  </div>
+</div>
+
+<!-- MODAL LX63 -->
+<div id="modalLX63" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-logo"><span class="modal-emoji">🔷 🎯</span></div>
+    <h2>LX63 Executor</h2>
+    <div class="info-site">🌐 site oficial: <a href="https://lx63.xyz/#" target="_blank" rel="noopener noreferrer">lx63.xyz</a></div>
+    <p>Baixe a versão mais recente do LX63 Executor. Avançado, preciso e extremamente estável.</p>
+    <a class="btn-download" href="https://store1.gofile.io/download/web/bfa28624-b77f-486b-9608-9f7ba336f6a2/LX63.zip" download="LX63.zip">⬇️ Baixar LX63</a><br>
+    <button class="close-modal-btn" data-modal="modalLX63">Fechar</button>
+  </div>
+</div>
+
 <script>
   (function() {
     const modals = {
       solara: document.getElementById('modalSolara'),
       luna: document.getElementById('modalLuna'),
       velocity: document.getElementById('modalVelocity'),
-      madium: document.getElementById('modalMadium')
+      madium: document.getElementById('modalMadium'),
+      swift: document.getElementById('modalSwift'),
+      lx63: document.getElementById('modalLX63')
     };
 
     const openSolaraBtn = document.getElementById('openSolaraBtn');
     const openLunaBtn = document.getElementById('openLunaBtn');
     const openVelocityBtn = document.getElementById('openVelocityBtn');
     const openMadiumBtn = document.getElementById('openMadiumBtn');
+    const openSwiftBtn = document.getElementById('openSwiftBtn');
+    const openLX63Btn = document.getElementById('openLX63Btn');
 
     function openModal(modalId) {
       const modal = modals[modalId];
@@ -477,6 +523,8 @@
     if (openLunaBtn) openLunaBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('luna'); });
     if (openVelocityBtn) openVelocityBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('velocity'); });
     if (openMadiumBtn) openMadiumBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('madium'); });
+    if (openSwiftBtn) openSwiftBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('swift'); });
+    if (openLX63Btn) openLX63Btn.addEventListener('click', (e) => { e.stopPropagation(); openModal('lx63'); });
 
     document.querySelectorAll('.close-modal-btn').forEach(btn => {
       btn.addEventListener('click', function() {
