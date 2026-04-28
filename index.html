@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>Alek Dev Scripts | Luna + Solara + Velocity + Madium + Xeno + Volt + Wave + Swift + LX63 Executors</title>
+  <title>Alek Dev Scripts | Luna + Solara + Velocity + Madium + Xeno + Volt + Wave + Swift + Delta + LX63 Executors</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
     * {
@@ -401,7 +401,7 @@
         <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
 
-      <!-- card Wave Executor (NOVO) -->
+      <!-- card Wave Executor -->
       <div class="executor-card" id="openWaveBtn">
         <div class="card-icon">🌊</div>
         <h3>Wave Executor</h3>
@@ -419,7 +419,16 @@
         <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
 
-      <!-- card LX63 Executor -->
+      <!-- card Delta Executor (agora antes do LX63) -->
+      <div class="executor-card" id="openDeltaBtn">
+        <div class="card-icon">🔺</div>
+        <h3>Delta Executor</h3>
+        <div class="badge">🔺 versátil · compatível</div>
+        <p>Executor versátil com compatibilidade avançada e alta performance para Android.</p>
+        <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
+      </div>
+
+      <!-- card LX63 Executor (agora depois do Delta) -->
       <div class="executor-card" id="openLX63Btn">
         <div class="card-icon">🔷</div>
         <h3>LX63 Executor</h3>
@@ -507,7 +516,7 @@
   </div>
 </div>
 
-<!-- MODAL WAVE (NOVO) -->
+<!-- MODAL WAVE -->
 <div id="modalWave" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-logo"><span class="modal-emoji">🌊 ✨</span></div>
@@ -528,6 +537,18 @@
     <p>Baixe a versão mais recente do Swift Executor. Ultra-rápido, seguro e confiável.</p>
     <a class="btn-download" href="https://getswift.vip/download" download>⬇️ Baixar Swift</a><br>
     <button class="close-modal-btn" data-modal="modalSwift">Fechar</button>
+  </div>
+</div>
+
+<!-- MODAL DELTA -->
+<div id="modalDelta" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-logo"><span class="modal-emoji">🔺 📱</span></div>
+    <h2>Delta Executor</h2>
+    <div class="info-site">🌐 site oficial: <a href="https://delta.filenetwork.vip/android.html" target="_blank" rel="noopener noreferrer">delta.filenetwork.vip/android.html</a></div>
+    <p>Baixe a versão mais recente do Delta Executor. Versátil, compatível e com alta performance para Android.</p>
+    <a class="btn-download" href="https://delta.filenetwork.vip/file/Delta-2.718.1110.apk" download="Delta-2.718.1110.apk">⬇️ Baixar Delta</a><br>
+    <button class="close-modal-btn" data-modal="modalDelta">Fechar</button>
   </div>
 </div>
 
@@ -554,6 +575,7 @@
       volt: document.getElementById('modalVolt'),
       wave: document.getElementById('modalWave'),
       swift: document.getElementById('modalSwift'),
+      delta: document.getElementById('modalDelta'),
       lx63: document.getElementById('modalLX63')
     };
 
@@ -565,6 +587,7 @@
     const openVoltBtn = document.getElementById('openVoltBtn');
     const openWaveBtn = document.getElementById('openWaveBtn');
     const openSwiftBtn = document.getElementById('openSwiftBtn');
+    const openDeltaBtn = document.getElementById('openDeltaBtn');
     const openLX63Btn = document.getElementById('openLX63Btn');
 
     function openModal(modalId) {
@@ -596,6 +619,7 @@
     if (openVoltBtn) openVoltBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('volt'); });
     if (openWaveBtn) openWaveBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('wave'); });
     if (openSwiftBtn) openSwiftBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('swift'); });
+    if (openDeltaBtn) openDeltaBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal('delta'); });
     if (openLX63Btn) openLX63Btn.addEventListener('click', (e) => { e.stopPropagation(); openModal('lx63'); });
 
     document.querySelectorAll('.close-modal-btn').forEach(btn => {
