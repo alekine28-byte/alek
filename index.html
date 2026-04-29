@@ -121,6 +121,40 @@
       box-shadow: 0 25px 40px -12px rgba(56, 189, 248, 0.25);
     }
 
+    /* Card de desenvolvimento (não clicável) */
+    .executor-card.dev-card {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .executor-card.dev-card:hover {
+      transform: none;
+      border-color: rgba(56, 189, 248, 0.2);
+      background: rgba(18, 25, 45, 0.75);
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
+    }
+
+    .lock-icon {
+      font-size: clamp(2rem, 8vw, 3rem);
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      opacity: 0.8;
+    }
+
+    .dev-badge {
+      background: #7c2d12;
+      display: inline-block;
+      padding: 0.25rem 0.9rem;
+      border-radius: 40px;
+      font-size: clamp(0.65rem, 2.5vw, 0.75rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #fdba74;
+      margin: 0.75rem 0 0.5rem;
+      border: 0.5px solid #ea580c40;
+    }
+
     .card-icon {
       font-size: clamp(2.5rem, 10vw, 3.8rem);
       margin-bottom: 1rem;
@@ -427,6 +461,15 @@
         <p>Executor de última geração com alto desempenho, estabilidade incomparável e suporte total.</p>
         <div class="btn-trigger">📦 Ver detalhes <span>→</span></div>
       </div>
+
+      <!-- card AlekDevS Executor - Em Desenvolvimento (não clicável) -->
+      <div class="executor-card dev-card" style="cursor: not-allowed;">
+        <div class="lock-icon">🔒</div>
+        <h3 style="color: #94a3b8;">AlekDevS Executor</h3>
+        <div class="dev-badge">🚧 EM DESENVOLVIMENTO</div>
+        <p>Em breve - Um executor exclusivo desenvolvido pela Alek Dev Scripts com tecnologia proprietária.</p>
+        <div class="btn-trigger" style="opacity: 0.5; pointer-events: none;">🔒 Indisponível</div>
+      </div>
     </div>
   </div>
 
@@ -483,14 +526,14 @@
   </div>
 </div>
 
-<!-- MODAL VOLT (Link atualizado) -->
+<!-- MODAL VOLT (Link atualizado com a nova URL) -->
 <div id="modalVolt" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-logo"><span class="modal-emoji">⚡ 🔋</span></div>
     <h2>Volt Executor</h2>
     <div class="info-site">🌐 site oficial: <a href="https://volt.bz" target="_blank" rel="noopener noreferrer">volt.bz</a></div>
     <p>Baixe a versão mais recente do Volt Executor. Potente, confiável e com alta performance.</p>
-    <a class="btn-download" href="https://volt-bucket-geoeoqnffde2n.t3.storageapi.dev/ui/0.2.30/ecf8a495-48a4-48e6-a301-fadf7f309dc1/volt.exe?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=tid_TblQQAtoUfioJcNgXgtSUIgfEUOdptdmUqnggUktJtZBoDrURn%2F20260428%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260428T200129Z&X-Amz-Expires=900&X-Amz-Signature=7c0206b551fa2a7637841048b0f24ff7d199e840dab7a08f101e93d891fde64a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" download="volt.exe">⬇️ Baixar Volt</a><br>
+    <a class="btn-download" href="https://volt-bucket-geoeoqnffde2n.t3.storageapi.dev/ui/0.2.30/ecf8a495-48a4-48e6-a301-fadf7f309dc1/volt.exe?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=tid_TblQQAtoUfioJcNgXgtSUIgfEUOdptdmUqnggUktJtZBoDrURn%2F20260429%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260429T030541Z&X-Amz-Expires=900&X-Amz-Signature=29ca1c6b6d7740b134d53cad2da5cc07aed43a33e537805c4972fe80a0e8819a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" download="volt.exe">⬇️ Baixar Volt</a><br>
     <button class="close-modal-btn" data-modal="modalVolt">Fechar</button>
   </div>
 </div>
